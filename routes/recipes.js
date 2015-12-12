@@ -19,6 +19,7 @@ router.use(function timeLog(req, res, next) {
 router.post('/', function (req, res) {
     recipes.insert({ name: 'Recipe', bigdata: false }, function (error, result) {
         winston.info(error, result);
+        res.json(result);
     });
 });
 
