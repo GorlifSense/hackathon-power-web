@@ -79,9 +79,10 @@ header #search i {
 header #user {
 	right:0;
 }
-header #user div {
+header #user div.container {
 	margin-left:21%;
 	color:gray;
+	position: relative;
 }
 header #user div i {
 	margin-right: 15px;
@@ -94,6 +95,79 @@ header #user div i {
 header #user div p {
 	font-size: 20px;
 	line-height: 75px;
+}
+header #user div#user-menu {
+    position: absolute;
+    width:240px;
+    padding:10px 15px;
+    height:100px;
+    background:white;
+    border:1px solid #d7d7d7;
+    top:115%;
+    right:71%;
+    opacity: 0;
+    transition:.3s;
+}
+header #user div#user-menu.active {
+	opacity: 1;
+}
+header #user div#user-menu:before{
+	content:" ";
+	position: absolute;
+	top:-15px;
+	right: 15px;
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 0 15px 15px 15px;
+	border-color: transparent transparent #fbfbfb transparent;
+}
+header div div#user-menu i{
+    border:1px solid gray;
+    width:50px;
+    height:50px;
+    border-radius:50%;
+    text-align:center;
+    line-height:50px
+}
+header div div#user-menu p#user-mail{
+	font-size:16px;
+	line-height: 30px;
+    width: 168px;
+    float: right;
+    text-align: center;
+    border-bottom: 1px solid;
+}
+header div div#user-menu #options {
+	width: 168px;
+    float: right;
+    text-align: right;
+}
+header div div#user-menu #options span {
+	font-size: 18px;
+    line-height: 40px;
+    cursor: pointer;
+    padding: 1px 11px;
+    border: 1px solid;
+}
+header div div#user-menu #logout{
+    height: 30px;
+    width: 270px;
+    vertical-align: bottom;
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    line-height: 31px;
+    background:gray;
+    text-align: right;
+}
+header div div#user-menu #logout span{
+	color:white;
+	cursor: pointer;
+    padding: 1px 11px;
+    border: 1px solid;
+    margin-right:15px;
 }
 /* --- Left appearing menu */
 div#menu-trigger {

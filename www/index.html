@@ -25,8 +25,18 @@
 				<input type="text" id="search-input" placeholder="search...">
 			</div>
 			<div id="user">
-				<div>
-					<i class="fa fa-user"></i>
+				<div class="container">
+					<i class="fa fa-user" id="user-menu-trigger"></i>
+					<div id="user-menu" class="" style="display:none;">
+						<i class="fa fa-user" class="user-pic"></i>
+						<p id="user-mail">belrestro@gmail.com</p>
+						<div id="options">
+							<span>Options</span>
+						</div>
+						<div id="logout">
+							<span>Logout</span>
+						</div>
+					</div>
 					<p>User name</p>
 				</div>
 			</div>
@@ -62,6 +72,19 @@
 				getE('#main-menu').className = '';
 			} else {
 				getE('#main-menu').className = 'active';
+			}
+		});
+		getE('#user-menu-trigger').addEventListener('click',function(){
+			if(getE('#user-menu').className=="active") {
+				getE('#user-menu').className = "";
+				clearTimeout(x);
+				var x = setTimeout(function(){
+					getE('#user-menu').style.display = 'none';
+				},300);
+			} else {
+				getE('#user-menu').className = "active";
+					clearTimeout(x);
+					getE('#user-menu').style.display = 'block';
 			}
 		});
 	</script>
