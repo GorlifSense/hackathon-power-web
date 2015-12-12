@@ -11,7 +11,7 @@ var winston = require('winston');
 app.get('/', routes.index);
 app.use(express.static('www'));
 
-var server = app.listen(80, function() {
+var server = app.listen(8080, function() {
 
     var host = server.address().address
     var port = server.address().port
