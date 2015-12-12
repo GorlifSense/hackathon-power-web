@@ -1,0 +1,28 @@
+{
+  "name": "recooker",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "express": "^4.13.3",
+    "jade": ">= 0.0.1",
+    "winston": "^2.1.1"
+  },
+  "description": "ReCooker",
+  "main": "app.js",
+  "devDependencies": {
+    "mocha": "^2.3.4"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GorlifSense/hackathon-power-web.git"
+  },
+  "author": "Gorlif Sense",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GorlifSense/hackathon-power-web/issues"
+  },
+  "homepage": "https://github.com/GorlifSense/hackathon-power-web#readme"
+}
