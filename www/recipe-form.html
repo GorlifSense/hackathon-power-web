@@ -1,0 +1,36 @@
+<div id="recipe-form">
+	<input type="text" id="recipe-name" placeholder="recipe name" pattern="/[^@!#$^&*]/g">
+	<div id="ingridient-list">
+		<input type="text" class="recipe-ingridient" placeholder="ingridient" pattern="/[^@!#$^&*]/g">
+	</div>
+	<button onclick="addIngridient();">Add ingridient</button>
+	<input type="text" id="expected-price" placeholder="expected price" pattern="/[^@!#$^&*]/g">
+	<input type="submit">
+	<script>
+	function addIngridient(){
+		var input = document.createElement("input");
+		input.type = "text";input.className = "recipe-ingridient";input.placeholder = "ingridient";input.pattern = "/[^@!#$^&*]/g"
+		getE("#ingridient-list").appendChild(input);    
+	}
+	var inputs = getE('input');
+	for (var key=0;key<inputs.length;key++) {
+		if(inputs[key].type == "submit") {
+			inputs[key].addEventListener('click', function(){
+				var obj = {};
+				obj.ingridients = [];
+				var recipes = getE('.recipe-ingridient');
+				for(var i=0;i<recipes.length;i++) {
+					obj.ingridients.push(recipes[i].value);
+				}
+				obj.name = getE('#recipe-name').value;
+				obj.exPrice = getE('#expected-price').value;
+				for(var key in obj) {
+					if(obj.hasOwnProperty(key)) {
+						console.log(key + ' : ' + obj[key]);
+					}
+				}
+			});
+		}
+	}
+	</script>
+</div>
