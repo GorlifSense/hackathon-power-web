@@ -8,7 +8,7 @@ var winston = require('winston');
 //     res.send('Hello World!')
 // })
 
-app.get('/', routes.index);
+// app.get('/', routes.index);
 app.use(express.static('www'));
 
 var server = app.listen(8080, function() {
