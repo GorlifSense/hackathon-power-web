@@ -9,7 +9,7 @@ var winston = require('winston');
 // })
 
 app.get('/', routes.index);
-
+app.use(express.static('www'));
 
 var server = app.listen(80, function() {
 
