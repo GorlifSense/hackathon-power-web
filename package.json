@@ -3,10 +3,13 @@
   "version": "0.0.1",
   "private": true,
   "dependencies": {
+    "boom": "^3.0.0",
     "express": "^4.13.3",
+    "express-boom": "^0.3.0",
     "jade": ">= 0.0.1",
     "mongodb": "^2.1.0",
     "monk": "^1.0.1",
+    "morgan": "^1.6.1",
     "serve-favicon": "^2.3.0",
     "winston": "^2.1.1"
   },
@@ -16,6 +19,7 @@
     "mocha": "^2.3.4"
   },
   "scripts": {
+    "start": "node app.js",
     "test": "mocha"
   },
   "repository": {
@@ -23,6 +27,11 @@
     "url": "git+https://github.com/GorlifSense/hackathon-power-web.git"
   },
   "author": "Gorlif Sense",
+  "contributors": [
+    "Glib Ischenko <glib@gorlifsense.com>",
+    "Daniil Timoshuk <danila.timoshuk@gmail.com>",
+    "Andrew Belrestro <belrestro@gmail.com>"
+  ],
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/GorlifSense/hackathon-power-web/issues"

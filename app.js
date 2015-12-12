@@ -4,32 +4,36 @@ var app = express();
 var routes = require('./routes');
 var winston = require('winston');
 var favicon = require('serve-favicon');
+var boom = require('express-boom');
+var morgan = require('morgan');
 
-var mongo = require('mongodb');
-var monk = require('monk');
-var db = monk('localhost/recooker');
+var routes = require('./routes');
 
+winston.remove(winston.transports.Console);
+winston.add(winston.transports.Console, {
+    colorize: true,
+    level: 'debug',
+    prettyPrint: true,
+    humanReadableUnhandledException: true
+});
+
+app.use(boom());
+app.use(morgan('dev'));
 
 // routes
 app.use(express.static('www'));
-app.use(function(req,res,next){
-    req.db = db;
-    next();
-});
 
-app.get('/users', routes.users);
-app.get('/userlist', routes.userlist);
+app.use('/recipes', routes.recipes);
+
 
 // in case of error
 app.use(function(req, res, next) {
-    var err = new Error('Not Found');
-    err.status = 404;
-    next(err);
+    res.boom.notFound('Not Found');
 });
 
 app.use(function(err, req, res, next) {
     res.status(err.status || 500);
-    res.render('error', {
+    res.json({
         message: err.message,
         error: {}
     });
