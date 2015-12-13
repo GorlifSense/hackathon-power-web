@@ -67,6 +67,7 @@
 		</ul>
 	</nav>
 	<script>
+		// Left menu appear
 		getE('#menu-trigger').addEventListener('click', function(){
 			if(getE('#main-menu').className.indexOf('active')>-1) {
 				getE('#main-menu').className = '';
@@ -74,6 +75,7 @@
 				getE('#main-menu').className = 'active';
 			}
 		});
+		// User menu appear
 		getE('#user-menu-trigger').addEventListener('click',function(){
 			if(getE('#user-menu').className=="active") {
 				getE('#user-menu').className = "";
@@ -87,6 +89,8 @@
 					getE('#user-menu').style.display = 'block';
 			}
 		});
+		// Init main content 
+		$('#content').load('all-recipes.html');
 	</script>
 </body>
 </html>
