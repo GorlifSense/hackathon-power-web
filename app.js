@@ -6,6 +6,7 @@ var winston = require('winston');
 var favicon = require('serve-favicon');
 var boom = require('express-boom');
 var morgan = require('morgan');
+var bodyParser = require('body-parser');
 
 var routes = require('./routes');
 
@@ -20,10 +21,14 @@ winston.add(winston.transports.Console, {
 app.use(boom());
 app.use(morgan('dev'));
 
+app.use(bodyParser.json()); // for parsing application/json
+app.use(bodyParser.urlencoded({ extended: true })); // for parsing application/x-www-form-urlencoded
+
 // routes
 app.use(express.static('www'));
 
 app.use('/recipes', routes.recipes);
+app.use('/categories', routes.categories);
 
 
 // in case of error
