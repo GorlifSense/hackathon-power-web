@@ -1,0 +1,76 @@
+<div id="recipe-results">
+	<br/>
+</div>
+<div id="modal-recipe" class=""></div>
+<script>
+	function plus(a,b){return a+b;}
+	function avgRaiting(stars) {
+		return (stars.reduce(plus)/stars.length).toFixed(1);
+	}
+	$.getJSON( "test-recipes.json", function(data) {
+		Object.keys(data).forEach(function(key, i) {
+				var side = i%2 ? 'right' : 'left';
+				getE('#recipe-results').innerHTML += '<div class="recipe '+side+'"></div>';
+				var recipe = getE('.recipe')[i];
+				recipe.innerHTML += '<div class="recipe-pic"><img src="'+data[key].pic+'"/></div>';
+				var description = '<div class="description">\n';
+				description += '<h3>'+data[key].name+'</h3>';
+				var d = data[key].description.length > 250 ? (data[key].description.slice(0,247)+'...') : data[key].description;
+				description += '<p>'+d+'</p>';
+				var about = '<div class="about">\n';
+				about += '<p>Made by : <a href="#">'+data[key].customer+'</a></p>\n';
+				about += '</div>\n';
+				description += about;	
+				description += '<div class="save-this-recipe"><div><span>Save this</span></div></div>\n<br/>';
+				description += '</div>\n<br/>';
+				description += '<div class="more-recipe" id="more-'+key+'">More</div>';
+				recipe.innerHTML += description;
+		});
+	});
+	var v = setTimeout(function(){
+		clearTimeout(v);
+		recipesMore = getE('.more-recipe');
+		Array.prototype.forEach.call(recipesMore, function(more){
+			more.addEventListener('click', function(){
+			modalSingleRecipe(this.id);
+		})
+		})
+	},300);
+	function modalSwitcher() {
+		var modal = getE('#modal-recipe');
+		modal.className = modal.className == "active" ? "" : "active";
+	}
+	function addIngridient(){
+		var input = document.createElement("input");
+		input.type = "text";input.className = "recipe-ingridient";input.placeholder = "ingridient";input.pattern = "/[^@!#$^&*]/g"
+		getE("#ingridient-list").appendChild(input);    
+	}
+	function modalSingleRecipe(arg) {
+		var query = arg.split('-');
+		query = query[1];
+		$.getJSON( "test-recipes.json", function(data) {
+			var modal = getE('#modal-recipe');
+			var obj = data[query];
+			string = '';
+			string += '<div id="side-culumn">\n';
+			string += '<div class="recipe-pic"><img src="'+obj.pic+'"/>\n</div>\n';
+			string += '<div id="time-to-cook">\n';
+			string += '<div id="cook-time">\n<i class="fa fa-clock-o"></i>';
+			string += '<p>'+obj.cookTime+' hour.</p><br/></div>\n';
+			string += '<div id="ingridient-list">\n<input type="text" class="recipe-ingridient" placeholder="ingridient" pattern="/[^@!#$^&*]/g">\n</div>\n<button onclick="addIngridient();">Add ingridient</button>\n';
+			string += '</div>';
+			string += '</div>\n';
+			string += '<div id="recipe-order-step"><div id="stage0"></div><div></div><div id="stage1"></div><div></div><div id="stage2"></div></div>';
+			string += '<div id="single-recipe-description">\n';
+			string += '<h3>'+obj.name+'</h3>\n';
+			string += '<p>'+obj.description+'</p>\n';
+			string += '<div id="modal-switcher" onclick="modalSwitcher()">x</div>';
+			string += '</div>\n';
+			string += '<div id="single-order-detailes>\n';
+			string += '<input type="text" id="order-place"/>\n';
+			string += '</div>\n<br/>';
+			modal.innerHTML = string;
+			modalSwitcher();
+		});
+	}
+	</script>

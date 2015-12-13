@@ -6,6 +6,7 @@ var query = function(request) {
 var generatePage = function(data) {
 
 }
+/* ---  Simple conseption of gedding DOM elements*/
 function getE(element) {
 	var symb = element.charAt(0);
 	var elementName = element.slice(1);

@@ -1,0 +1,10 @@
+<script>
+	var stars = '';
+	stars += '<div class="stars"><div style="width:'+((avgRaiting(data[key].chief.raiting)*10)+'%')+'">\n';
+	for(var sc = 0;sc<5;sc++) {
+		stars += '<img src="css/images/star.png" width="20" height="19">\n';
+	}
+	stars += "</div></div>\n";
+	description += stars;
+	about += '<p>Cooked by : <a href="#">'+data[key].chief.name+'</a> '+avgRaiting(data[key].chief.raiting)+' for '+data[key].cost+'$</p>\n';
+</script>
