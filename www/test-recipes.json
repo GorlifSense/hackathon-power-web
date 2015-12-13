@@ -1,4 +1,128 @@
 {
-"cupcake" : {"pic":"images/1.png","chief":{"name":"Some good guy","raiting" : [10] }, "ingridients" : ["ingridient1","ingridient2","ingridient3","ingridient4","ingridient5"], "name" : "Ice cone cheese cake", "customer" : "Usuf Bin Laden", "cost" : 2.46, "date" : [12,12,2016],"difficulty":2,"description":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis, recusandae fugit nisi, temporibus deserunt repellat iure, animi itaque nobis laborum ducimus ab vitae error tempore veniam, velit voluptatum. Ullam, praesentium?", "cookTime":1.40},
-"New cupcake" : {"pic":"images/2.png","chief":{"name":"Some avarage guy","raiting" : [8] }, "ingridients" : ["ingridient1-1","ingridient2-1","ingridient3-1","ingridient4-1","ingridient5-1", "ingridient1-1","ingridient2-1","ingridient3-1","ingridient4-1","ingridient5-1"], "name" : "Bacon salad", "customer" : "Muchamed Asrea", "cost" : 5.31, "date" : [12,12,2016],"difficulty":1,"description":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad eaque quos illo, cumque velit aperiam, tenetur amet sed minus placeat? Repellendus porro sit eligendi eveniet dolor veritatis odit fugit exercitationem.", "cookTime":1.40},
-"Autumn taste" : {"pic":"images/3.png","chief":{"name":"Some bad guy","raiting" : [4,2,3,5,3,5,3,3,3] }, "ingridients" : ["corn","beens","mayo","oak leafs"], "name" : "Autumn taste", "customer" : "Иоосиф Кобзон", "cost" : 1.2, "date" : [12,12,2016],"difficulty":0, "description":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus, suscipit facere dignissimos quam neque libero magni consequatur non nemo porro maiores ullam ipsum iste, dolore aut! Iusto accusantium quis, excepturi.", "cookTime":1.40}}
+    "cupcake": {
+        "pic": "images/1.png",
+        "chief": {
+            "name": "Some good guy",
+            "raiting": [10]
+        },
+        "ingridients": ["ingridient1", "ingridient2", "ingridient3",
+            "ingridient4", "ingridient5"
+        ],
+        "name": "Ice cone cheese cake",
+        "customer": "Usuf Bin Laden",
+        "cost": 2.46,
+        "date": [12, 12, 2016],
+        "difficulty": 2,
+        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis, recusandae fugit nisi, temporibus deserunt repellat iure, animi itaque nobis laborum ducimus ab vitae error tempore veniam, velit voluptatum. Ullam, praesentium?",
+        "cookTime": 1.40
+    },
+    "New cupcake": {
+        "pic": "images/2.png",
+        "chief": {
+            "name": "Some avarage guy",
+            "raiting": [8]
+        },
+        "ingridients": ["ingridient1-1", "ingridient2-1", "ingridient3-1",
+            "ingridient4-1", "ingridient5-1", "ingridient1-1",
+            "ingridient2-1", "ingridient3-1", "ingridient4-1",
+            "ingridient5-1"
+        ],
+        "name": "Bacon salad",
+        "customer": "Muchamed Asrea",
+        "cost": 5.31,
+        "date": [12, 12, 2016],
+        "difficulty": 1,
+        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad eaque quos illo, cumque velit aperiam, tenetur amet sed minus placeat? Repellendus porro sit eligendi eveniet dolor veritatis odit fugit exercitationem.",
+        "cookTime": 1.40
+    },
+    "Autumn taste1": {
+        "pic": "images/3.png",
+        "chief": {
+            "name": "Some bad guy",
+            "raiting": [4, 2, 3, 5, 3, 5, 3, 3, 3]
+        },
+        "ingridients": ["corn", "beens", "mayo", "oak leafs"],
+        "name": "Autumn taste",
+        "customer": "Иоосиф Кобзон",
+        "cost": 1.2,
+        "date": [12, 12, 2016],
+        "difficulty": 0,
+        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus, suscipit facere dignissimos quam neque libero magni consequatur non nemo porro maiores ullam ipsum iste, dolore aut! Iusto accusantium quis, excepturi.",
+        "cookTime": 1.40
+    },
+    "Autumn taste2": {
+        "pic": "http://pp.vk.me/c627121/v627121133/2d370/jyBPjTy4JkU.jpg",
+        "chief": {
+            "name": "Some bad guy",
+            "raiting": [4, 2, 3, 5, 3, 5, 3, 3, 3]
+        },
+        "ingridients": ["corn", "beens", "mayo", "oak leafs"],
+        "name": "Салат «Анастасия»",
+        "customer": "Иоосиф Кобзон",
+        "cost": 1.2,
+        "date": [12, 12, 2016],
+        "difficulty": 0,
+        "description": "Приготовление: Пекинскую капустку шинкуем, складываем в салатник. Ветчину режем длинными полосочками и туда же. Добавляем корейскую морковь. Куриную грудку режем. Яйца взбиваем, добавляем 2 ст.л. воды и чуть-чуть муки. Жарим 2 омлета, остужаем, нарезаем соломкой. Все смешиваем, солим по вкусу, заправляем майонезом и грецкими орехами.",
+        "cookTime": 1.40
+    },
+    "Autumn taste3": {
+        "pic": "https://pp.vk.me/c627121/v627121133/2d377/rBE4GKPmoQ4.jpg",
+        "chief": {
+            "name": "Some bad guy",
+            "raiting": [4, 2, 3, 5, 3, 5, 3, 3, 3]
+        },
+        "ingridients": ["corn", "beens", "mayo", "oak leafs"],
+        "name": "Салат Идиллия",
+        "customer": "Иоосиф Кобзон",
+        "cost": 1.2,
+        "date": [12, 12, 2016],
+        "difficulty": 0,
+        "description": "Яйца взбиваем слегка венчиком, добавляем соль, перец. На раскаленной сковородке, в небольшом количестве масла жарим яичный блинчик. Мясо нарезаем соломкой. Выкладываем мясной слой на тарелку, слегка смазываем майонезом. Следом выкладываем слой из порезанных соломкой огурчиков, тоже смазываем майонезом. Ингредиенты теперь слой порезанных соломкой яблочек. Смазываем слой майонезом. Весь салат равномерно посыпаем порезанным квадратами яичным блинчиком.",
+        "cookTime": 1.40
+    },
+    "Autumn taste4": {
+        "pic": "https://pp.vk.me/c627121/v627121133/2d37e/iZO6Kby14ck.jpg",
+        "chief": {
+            "name": "Some bad guy",
+            "raiting": [4, 2, 3, 5, 3, 5, 3, 3, 3]
+        },
+        "ingridients": ["corn", "beens", "mayo", "oak leafs"],
+        "name": "Салат Белая роза.",
+        "customer": "Иоосиф Кобзон",
+        "cost": 1.2,
+        "date": [12, 12, 2016],
+        "difficulty": 0,
+        "description": "Куриное филе отварить до готовности в подсоленной воде. Грибы отварить в воде 10 минут и откинуть на дуршлаг (шампиньоны отваривать не нужно). Яйца сварить вкрутую. Чернослив замочить теплой водой и оставить на 10-15 минут. Затем слить воду и обсушить чернослив. Лук мелко порезать. Грибы порезать кубиками или соломкой. Обжарить на растительном масле лук, затем добавить грибы и жарить вместе ~7-10 минут, посолить и поперчить.",
+        "cookTime": 1.40
+    },
+    "Autumn taste5": {
+        "pic": "https://pp.vk.me/c627121/v627121133/2d385/bzteuq9LlEg.jpg",
+        "chief": {
+            "name": "Some bad guy",
+            "raiting": [4, 2, 3, 5, 3, 5, 3, 3, 3]
+        },
+        "ingridients": ["corn", "beens", "mayo", "oak leafs"],
+        "name": "Салат Белая береза.",
+        "customer": "Иоосиф Кобзон",
+        "cost": 1.2,
+        "date": [12, 12, 2016],
+        "difficulty": 0,
+        "description": "Если брать лесные грибы, то их нужно обжаривать вместе с луком ~7-10 минут (грибы предварительно отварить); если брать шампиньоны, то их предварительно не нужно отваривать, но жарить вместе с луком ~15-20 минут до готовности грибов. Куриное филе порезать соломкой. Отложить 3-5 ягод чернослива для украшения и порезать тонкой соломкой, оставшийся чернослив порезать кубиками. Яйца натереть на крупной терке. Огурцы порезать тонкой соломкой. Выкладывать салат слоями, каждый слой поливая майонезом: Сверху салат украсить полосками чернослива, в виде ствола березы.",
+        "cookTime": 1.40
+    },
+    "Autumn taste6": {
+        "pic": "https://pp.vk.me/c627121/v627121133/2d38c/dTuJmUmD_bI.jpg",
+        "chief": {
+            "name": "Some bad guy",
+            "raiting": [4, 2, 3, 5, 3, 5, 3, 3, 3]
+        },
+        "ingridients": ["corn", "beens", "mayo", "oak leafs"],
+        "name": "Autumn taste",
+        "customer": "Иоосиф Кобзон",
+        "cost": 1.2,
+        "date": [12, 12, 2016],
+        "difficulty": 0,
+        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus, suscipit facere dignissimos quam neque libero magni consequatur non nemo porro maiores ullam ipsum iste, dolore aut! Iusto accusantium quis, excepturi.",
+        "cookTime": 1.40
+    }
+}
